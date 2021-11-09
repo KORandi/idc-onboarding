@@ -1,0 +1,36 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Restaurantly - Menu{% endblock %}
+
+{% block body %}
+    <div class="container mt-3">
+        <div class="row pb-3">
+            <div class="col-12">
+                <h1>Menu</h1>
+            </div>
+        </div>
+        <div class="row">
+            {% for menu in menus %}
+                <div class="h3">
+                    {{ menu.date|date("d. m. Y") }}
+                </div>
+                <div>
+                    {% for course in menu.courses %}
+                        <div class="pt-3">
+                            <strong>{{ course.course }}</strong>
+
+                            {% for meal in course.meals %}
+                                <div>
+                                    {{ meal.name }} - {{ meal.price }} Kč,-
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+                <p class="text-muted">
+                    {{ menu.note }}
+                </p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

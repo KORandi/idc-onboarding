@@ -1,0 +1,31 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+/*
+    Header
+ */
+
+#header {
+    background: rgba(12, 11, 9, 0.6);
+    border-bottom: 1px solid rgba(12, 11, 9, 0.6);
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+    top: 40px;
+}
+
+/*
+    Flash message
+ */
+.flash-error {
+    background: #ffdadd;
+    color: #80413d;
+}
+
+/*
+    Body
+ */
+body {
+    background-color: lightgray;
+}

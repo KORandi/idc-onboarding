@@ -1,0 +1,30 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Restaurantly - Home{% endblock %}
+
+{% block body %}
+<div class="container mt-3">
+    <div class="row pb-3">
+        <div class="col-12">
+            <h1>List of restaurants</h1>
+        </div>
+    </div>
+    <div class="row">
+        {% for restaurant in restaurants %}
+            {% set gps = restaurant.gps %}
+            <section class="col-lg-4 col-md-6 col-12">
+                <a href="{{ path("menu", {restaurantID: restaurant.id}) }}" class="h3 text-dark">{{ restaurant.name }}</a>
+                <address>
+                    <div>
+                        <span>{{ restaurant.address }}</span>
+                    </div>
+                    <div style="font-size: 1.5rem">
+                        <a target="_blank" title="Restaurant website" href="{{ restaurant.url }}"><i class="bi-globe"></i></a>&nbsp;
+                        <a target="_blank" title="Restaurant location" href="https://www.google.com/maps/search/?api=1&query={{ gps.lat }},{{ gps.lng }}"><i class="bi-pin-map-fill"></i></a>
+                    </div>
+                </address>
+            </section>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('style') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('script') }}
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <div class="px-3 py-2 bg-dark text-white">
+                <div class="container">
+                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                        <a href="{{ path("homepage") }}" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                            Restaurantly
+                        </a>
+
+                        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                            <li>
+                                <a href="{{ path("homepage") }}" class="nav-link text-secondary">
+                                    Home
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        {% for message in app.flashes('error') %}
+            <div class="flash-error">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            {{ message }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        {% block body %}{% endblock %}
+    </body>
+</html>
