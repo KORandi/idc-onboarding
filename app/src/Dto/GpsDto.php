@@ -2,7 +2,7 @@
 
 namespace App\Dto;
 
-final class GpsDTO
+final class GpsDto
 {
     private float $lat;
     private float $lng;

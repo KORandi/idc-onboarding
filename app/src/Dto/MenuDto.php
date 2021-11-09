@@ -5,28 +5,28 @@ namespace App\Dto;
 use DateTimeImmutable;
 use DomainException;
 
-final class MenuDTO
+final class MenuDto
 {
     private DateTimeImmutable $date;
 
     /**
-     * @var CourseDTO[]
+     * @var CourseDto[]
      */
     private array $courses;
     private string $note;
 
     /**
      * @param DateTimeImmutable $date
-     * @param CourseDTO[] $courses
+     * @param CourseDto[] $courses
      * @param string|null $note
      */
     public function __construct(DateTimeImmutable $date, array $courses, ?string $note)
     {
         $this->date = $date;
 
-        // Check if all courses are instance of CourseDTO
+        // Check if all courses are instance of CourseDto
         foreach ($courses as $course) {
-            if (!$course instanceof CourseDTO) {
+            if (!$course instanceof CourseDto) {
                 throw new \DomainException;
             }
         }
@@ -43,7 +43,7 @@ final class MenuDTO
     }
 
     /**
-     * @return CourseDTO[]
+     * @return CourseDto[]
      */
     public function getCourses(): array
     {

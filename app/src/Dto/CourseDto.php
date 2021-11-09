@@ -2,26 +2,26 @@
 
 namespace App\Dto;
 
-final class CourseDTO
+final class CourseDto
 {
     private string $course;
 
     /**
-     * @var MealDTO[]
+     * @var MealDto[]
      */
     private array $meals;
 
     /**
      * @param string $course
-     * @param MealDTO[] $meals
+     * @param MealDto[] $meals
      */
     public function __construct(string $course, array $meals)
     {
         $this->course = $course;
 
-        // Check if all meals are instance of MealDTO
+        // Check if all meals are instance of MealDto
         foreach ($meals as $meal) {
-            if (!$meal instanceof MealDTO) {
+            if (!$meal instanceof MealDto) {
                 throw new \DomainException;
             }
         }
@@ -38,7 +38,7 @@ final class CourseDTO
     }
 
     /**
-     * @return MealDTO[]
+     * @return MealDto[]
      */
     public function getMeals(): array
     {

@@ -2,22 +2,22 @@
 
 namespace App\Dto;
 
-final class RestaurantDTO
+final class RestaurantDto
 {
     private int $id;
     private string $name;
     private string $address;
     private string $url;
-    private GpsDTO $gps;
+    private GpsDto $gps;
 
     /**
      * @param int $id
      * @param string $name
      * @param string $address
      * @param string $url
-     * @param GpsDTO $gps
+     * @param GpsDto $gps
      */
-    public function __construct(int $id, string $name, string $address, string $url, GpsDTO $gps)
+    public function __construct(int $id, string $name, string $address, string $url, GpsDto $gps)
     {
         $this->id = $id;
         $this->name = $name;
@@ -59,9 +59,9 @@ final class RestaurantDTO
     }
 
     /**
-     * @return GpsDTO
+     * @return GpsDto
      */
-    public function getGps(): GpsDTO
+    public function getGps(): GpsDto
     {
         return $this->gps;
     }

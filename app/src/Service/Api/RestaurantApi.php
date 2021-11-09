@@ -2,11 +2,11 @@
 
 namespace App\Service\Api;
 
-use App\Dto\CourseDTO;
-use App\Dto\GpsDTO;
-use App\Dto\MealDTO;
-use App\Dto\MenuDTO;
-use App\Dto\RestaurantDTO;
+use App\Dto\CourseDto;
+use App\Dto\GpsDto;
+use App\Dto\MealDto;
+use App\Dto\MenuDto;
+use App\Dto\RestaurantDto;
 use DateTimeImmutable;
 use Exception;
 use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
@@ -26,12 +26,12 @@ class RestaurantApi
     }
 
     /**
-     * @throws TransportExceptionInterface
-     * @throws ClientExceptionInterface
+     * @return RestaurantDto[]
+     *@throws ClientExceptionInterface
      * @throws RedirectionExceptionInterface
      * @throws ServerExceptionInterface
      * @throws DecodingExceptionInterface
-     * @return RestaurantDTO[]
+     * @throws TransportExceptionInterface
      */
     public function fetchRestaurants(): array
     {
@@ -42,19 +42,19 @@ class RestaurantApi
         $content = $response->toArray(true);
         $restaurants = [];
         foreach ($content as $restaurant) {
-            $restaurants[] = $this->getRestaurantDTO($restaurant);
+            $restaurants[] = $this->getRestaurantDto($restaurant);
         }
         return $restaurants;
     }
 
     /**
-     * @throws TransportExceptionInterface
-     * @throws ServerExceptionInterface
+     * @return MenuDto[]
+     *@throws ServerExceptionInterface
      * @throws RedirectionExceptionInterface
      * @throws DecodingExceptionInterface
      * @throws ClientExceptionInterface
      * @throws Exception
-     * @return MenuDTO[]
+     * @throws TransportExceptionInterface
      */
     public function fetchMenu(int $restaurantID): array
     {
@@ -66,20 +66,20 @@ class RestaurantApi
 
         $menus = [];
         foreach ($content as $menu) {
-            $menus[] = $this->getMenuDTO($menu);
+            $menus[] = $this->getMenuDto($menu);
         }
         return $menus;
     }
 
-    private function getRestaurantDTO($restaurant): RestaurantDTO
+    private function getRestaurantDto($restaurant): RestaurantDto
     {
         $gps = $restaurant["gps"];
-        return new RestaurantDTO(
+        return new RestaurantDto(
             $restaurant["id"],
             $restaurant["name"],
             $restaurant["address"],
             $restaurant["url"],
-            new GpsDTO(
+            new GpsDto(
                 $gps["lat"],
                 $gps["lng"]
             )
@@ -89,32 +89,32 @@ class RestaurantApi
     /**
      * @throws Exception
      */
-    private function getMenuDTO($menu): MenuDTO
+    private function getMenuDto($menu): MenuDto
     {
         $courses = [];
         foreach ($menu["courses"] as $course) {
-            $courses[] = $this->getCourseDTO($course);
+            $courses[] = $this->getCourseDto($course);
         }
-        return new MenuDTO(
+        return new MenuDto(
             new DateTimeImmutable($menu["date"]),
             $courses,
             $menu["note"]
         );
     }
 
-    private function getCourseDTO($course): CourseDTO {
+    private function getCourseDto($course): CourseDto {
         $meals = [];
         foreach ($course["meals"] as $meal) {
-            $meals[] = $this->getMealDTO($meal);
+            $meals[] = $this->getMealDto($meal);
         }
-        return new CourseDTO(
+        return new CourseDto(
             $course["course"],
             $meals
         );
     }
 
-    private function getMealDTO($meal): MealDTO {
-        return new MealDTO(
+    private function getMealDto($meal): MealDto {
+        return new MealDto(
             $meal["name"],
             $meal["price"]
         );

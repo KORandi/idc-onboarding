@@ -2,7 +2,7 @@
 
 namespace App\Dto;
 
-final class MealDTO
+final class MealDto
 {
     private string $name;
     private int $price;

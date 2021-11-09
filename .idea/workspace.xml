@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6efc8c23-693f-40bb-94ad-70970c102070" name="Changes" comment="[INIT] Initial load&#10;- Finishing first part of the task (REST + TEMPLATE)" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/app/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/app" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/app/vendor/composer" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/runtime" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/app/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/app/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/app/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/proxy-manager-bridge" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/password-hasher" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/app/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/twig/intl-extra" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/intl" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="20g7ENhnwhGRgio1XTQvSYKn5zH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/templates/restaurant" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\GV\PhpstormProjects\idc-onboarding\app\templates\restaurant" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\GV\PhpstormProjects\idc-onboarding\app\src\Service\Api" />
+      <recent name="C:\Users\GV\PhpstormProjects\idc-onboarding\app\src\Api" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.watch">
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/app/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="watch" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.watch" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6efc8c23-693f-40bb-94ad-70970c102070" name="Changes" comment="" />
+      <created>1636454266499</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636454266499</updated>
+      <workItem from="1636454268297" duration="4610000" />
+      <workItem from="1636467010751" duration="3358000" />
+      <workItem from="1636470412700" duration="17889000" />
+      <workItem from="1636488926106" duration="2404000" />
+    </task>
+    <task id="LOCAL-00001" summary="[INIT] Initial load&#10;- Finishing first part of the task (REST + TEMPLATE)">
+      <created>1636489737285</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1636489737285</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="[INIT] Initial load&#10;- Finishing first part of the task (REST + TEMPLATE)" />
+    <option name="LAST_COMMIT_MESSAGE" value="[INIT] Initial load&#10;- Finishing first part of the task (REST + TEMPLATE)" />
+  </component>
+</project>
