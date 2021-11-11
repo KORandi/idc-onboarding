@@ -14,6 +14,7 @@
 git clone https://github.com/KORandi/idc-onboarding.git
 cd ./idc-onboarding
 docker-compose up -d
+docker exec -it php74-container composer install
 docker-compose run --rm node-service yarn install
 docker-compose run --rm node-service yarn build
 docker exec -it php74-container cron #in case you want to start cron which sends email every morning at 9am on working days
