@@ -9,7 +9,18 @@ use Symfony\Component\Routing\Annotation\Route;
 class RestaurantController extends BaseController
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route(
+     *     "/",
+     *     name="homepage",
+     *     methods="GET"
+     * )
+     *
+     * @Route(
+     *     "/restaurant",
+     *     name="restaurant",
+     *     methods="GET"
+     * )
+     *
      */
     public function index(
         RestaurantApi $restaurantApi
@@ -28,7 +39,10 @@ class RestaurantController extends BaseController
     }
 
     /**
-     * @Route("/restaurant/{restaurantID}/menu", name="menu")
+     * @Route(
+     *     "/restaurant/{restaurantID}/menu",
+     *      name="menu"
+     * )
      */
     public function detail(
         int           $restaurantID,
@@ -37,7 +51,7 @@ class RestaurantController extends BaseController
     {
         $menus = [];
         try {
-            $menus = $restaurantApi->fetchMenu($restaurantID);
+            $menus = $restaurantApi->fetchMenus($restaurantID);
         } catch (\Exception $e) {
             $message = $e->getMessage();
             $this->addFlash("error", "Couldn't receive menu due: $message");

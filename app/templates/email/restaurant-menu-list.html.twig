@@ -1,0 +1,32 @@
+<div class="row">
+    {% for restaurant in restaurants %}
+        <div class="col-12">
+            <h2>
+                {{ restaurant.name }}
+            </h2>
+        </div>
+        {% for menu in restaurant.menus %}
+            <div class="col-12">
+                <div class="h3">
+                    {{ menu.date|date("d. m. Y") }}
+                </div>
+                <div>
+                    {% for course in menu.courses %}
+                        <div class="pt-3">
+                            <strong>{{ course.course }}</strong>
+
+                            {% for meal in course.meals %}
+                                <div>
+                                    {{ meal.name }} - {{ meal.price }} Kč,-
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+                <p class="text-muted">
+                    {{ menu.note }}
+                </p>
+            </div>
+        {% endfor %}
+    {% endfor %}
+</div>

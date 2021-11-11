@@ -2,6 +2,8 @@
 
 namespace App\Dto;
 
+use Exception;
+
 final class RestaurantDto
 {
     private int $id;
@@ -11,19 +13,34 @@ final class RestaurantDto
     private GpsDto $gps;
 
     /**
+     * @var MenuDto[] | null
+     */
+    private ?array $menus;
+
+    /**
      * @param int $id
      * @param string $name
      * @param string $address
      * @param string $url
      * @param GpsDto $gps
+     * @param MenuDto[] | null
+     * @throws Exception
      */
-    public function __construct(int $id, string $name, string $address, string $url, GpsDto $gps)
+    public function __construct(int $id, string $name, string $address, string $url, GpsDto $gps, ?array $menus)
     {
         $this->id = $id;
         $this->name = $name;
         $this->address = $address;
         $this->url = $url;
         $this->gps = $gps;
+
+        foreach ($menus as $menu) {
+            if (!$menu instanceof MenuDto) {
+                throw new Exception;
+            }
+        }
+
+        $this->menus = $menus;
     }
 
     /**
@@ -66,4 +83,11 @@ final class RestaurantDto
         return $this->gps;
     }
 
+    /**
+     * @return MenuDto[]|null
+     */
+    public function getMenus(): ?array
+    {
+        return $this->menus;
+    }
 }

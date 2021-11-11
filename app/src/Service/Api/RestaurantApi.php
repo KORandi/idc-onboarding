@@ -27,7 +27,7 @@ class RestaurantApi
 
     /**
      * @return RestaurantDto[]
-     *@throws ClientExceptionInterface
+     * @throws ClientExceptionInterface
      * @throws RedirectionExceptionInterface
      * @throws ServerExceptionInterface
      * @throws DecodingExceptionInterface
@@ -56,7 +56,7 @@ class RestaurantApi
      * @throws Exception
      * @throws TransportExceptionInterface
      */
-    public function fetchMenu(int $restaurantID): array
+    public function fetchMenus(int $restaurantID): array
     {
         $response = $this->httpClient->request(
             "GET",
@@ -82,7 +82,8 @@ class RestaurantApi
             new GpsDto(
                 $gps["lat"],
                 $gps["lng"]
-            )
+            ),
+            []
         );
     }
 

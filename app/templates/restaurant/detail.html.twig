@@ -11,25 +11,27 @@
         </div>
         <div class="row">
             {% for menu in menus %}
-                <div class="h3">
-                    {{ menu.date|date("d. m. Y") }}
-                </div>
-                <div>
-                    {% for course in menu.courses %}
-                        <div class="pt-3">
-                            <strong>{{ course.course }}</strong>
+                <div class="col-12">
+                    <div class="h3">
+                        {{ menu.date|date("d. m. Y") }}
+                    </div>
+                    <div>
+                        {% for course in menu.courses %}
+                            <div class="pt-3">
+                                <strong>{{ course.course }}</strong>
 
-                            {% for meal in course.meals %}
-                                <div>
-                                    {{ meal.name }} - {{ meal.price }} Kč,-
-                                </div>
-                            {% endfor %}
-                        </div>
-                    {% endfor %}
+                                {% for meal in course.meals %}
+                                    <div>
+                                        {{ meal.name }} - {{ meal.price }} Kč,-
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <p class="text-muted">
+                        {{ menu.note }}
+                    </p>
                 </div>
-                <p class="text-muted">
-                    {{ menu.note }}
-                </p>
             {% endfor %}
         </div>
     </div>
