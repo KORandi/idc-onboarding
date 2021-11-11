@@ -17,8 +17,8 @@ docker-compose up -d
 docker-compose run --rm node-service yarn install
 docker-compose run --rm node-service yarn build
 docker exec -it php74-container cron #in case you want to start cron which sends email every morning at 9am on working days
-open localhost:8080
 ```
+4. open localhost:8080
 
 ## Homepage
 There is a list of restaurants, when you click on title it will redirects to the menu
